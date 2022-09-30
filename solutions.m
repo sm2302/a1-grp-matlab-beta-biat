@@ -5,11 +5,13 @@ clc;
 A = sparse(50,50);
 
 % injecting population into A
-A(21:30,21:30) = (rand(10,10)<0.4);
+A(11:40,11:40) = (rand(30,30)<0.3);
 
-% loop over 200 generations
-for t = 1:200
-spy(A,'.',25)
+% loop over 100 generations
+for t = 1:100
+spy(A)
+imagesc(A)
+axis square
 drawnow
 
 % size of row matrix
